@@ -1,0 +1,18 @@
+server:
+  port: 9990
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    password: 12345678
+    url: jdbc:postgresql://postgresql-db/productdb
+    username: postgres
+  jpa:
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+  mvc:
+    pathmatch:
+      matching-strategy: ANT_PATH_MATCHER
